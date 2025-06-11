@@ -2,7 +2,7 @@
 
 A Flask-based application for storing and managing company metadata. This application provides a robust backend system for storing company information with SQLAlchemy integration and environment-based configuration.
 
-## Features
+## Features of it
 
 - Flask web framework with SQLAlchemy ORM
 - Environment-based configuration using python-dotenv
