@@ -8,7 +8,10 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
+    
+    # Load configuration
     app.config.from_object(Config)
+    Config.init_app(app)
 
     # Ensure upload folder exists
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
@@ -28,4 +31,4 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True) 
+    app.run(debug=app.config['FLASK_DEBUG'] == '1') 
